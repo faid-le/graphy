@@ -8,7 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto Slab:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Cabin', sans-serif;
                background-color: #f4f4f4;
@@ -32,7 +37,8 @@
                       margin-bottom: -5px;
                       display: inline-block;
                       transition: 1s;
-                      text-decoration: none; }
+                      text-align: center;
+                      text-decoration: none;}
 
         /* 1. Atur warna dasar h1 di dalam judul jadi hitam */
         #main-title h1 {
@@ -41,10 +47,10 @@
               display: inline-block; }
 
         /* 2. Warna-warni per kata (Hanya muncul jika ada class c1-c4) */
-        .c1 { color: #ff7300; font-style: italic; transition: 1s; } /* Oranye */
-        .c2 { color: #2dbb0a; font-style: italic; transition: 1s; } /* Hijau */
-        .c3 { color: #000000; font-style: italic; transition: 1s; } /* Hitam */
-        .c4 { color: #ff008c; font-style: italic; transition: 1s; } /* Pink */
+        .c1 { color: #ff7300; transition: 1s; } /* Oranye */
+        .c2 { color: #2dbb0a; transition: 1s; } /* Hijau */
+        .c3 { color: #000000; transition: 1s; } /* Hitam */
+        .c4 { color: #ff008c; transition: 1s; } /* Pink */
 
         /* 3. Efek Hover (Semua jadi hitam pekat saat disentuh) */
         #main-title:hover h1, 
@@ -71,14 +77,18 @@
 
         #home, #home * { font-family: 'Roboto Slab', serif; }
         .font-ultra { font-family: 'Ultra', serif !important; }
-        .font-rochester { font-family: 'Rochester', serif !important; }
+        .font-unifraktur { font-family: 'UnifrakturCook', serif !important; }
+        .font-boldonse { font-family: 'Boldonse', serif !important; }
+        .font-pirata { font-family: 'Pirata One', serif !important; }
+        .font-sancreek { font-family: 'Sancreek', serif !important; }
+                
 
         /* 2. Fix Kotak Putih CV agar tidak menabrak judul */
         #cvgw {
             background-color: #ffffff !important;
         /* Penjelasan margin: Atas 10px (biar judul muncul), Kiri-Kanan -30px (biar mentok), Bawah -30px */
-            margin: -75px -30px -30px -30px;
-            padding: 31px;
+            margin: -55px -30px -30px -30px;
+            padding: 30px;
             border-radius: 15px; 
             min-height: 100%;
             display: none; /* Mencegah elemen melayang gak jelas */
@@ -92,81 +102,169 @@
             margin-bottom: 5px;
         }
 
+        @keyframes fadeInEffect {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeInEffect 1s ease-out forwards; }
+
     </style>
 </head>
 <body>
 
     <div class="container">
         <a href="#" id="main-title" onclick="balikKeHome(); return false;">
-            <h1>
-            <span class="c1">faid-</span>
-            <span class="c2">le.git</span>
-            <span class="c3">hu</span>
-            <span class="c4">b.io/graphy/</span>
+            <h1 class="font-sancreek" style="text-align: center; font-size: 52px; margin: -15px 0 0px 0;">
+            <span class="c1">FAID-</span>
+            <span class="c2">LE.GIT</span>
+            <span class="c3">HU</span>
+            <span class="c4">B.IO/GRAPHY/</span>
             </h1>
         </a>
 
     <div id="home" class="page-content">
     <div style="text-align: justify; margin: 0; padding: 0; color: #333; line-height: 1.5;">
         
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-top: 10px;">
-            <div style="flex: 1; min-width: 300px;">
-                <p style="margin: 0;">
-                    <a href="https://instagram.com/fawoyid" style="color: #833AB4; text-decoration: none;">Instagram</a>
-                    <a href="http://twitter.com/parkiranmall" style="color: #000000; text-decoration: none;">Twitter/𝕏</a>
-                    <a href="https://open.spotify.com/user/21rhrrab5wau3b2paqfbzv56q/" style="color: #1DB954 ; text-decoration: none;">Spotify</a>
-                    <a href="https://fawaed.medium.com/" style="color: #000000 ; text-decoration: none;">Medium</a>
-                    <a href="https://www.linkedin.com/in/fawaid/" style="color: #0A66C2 ; text-decoration: none;">LinkedIn</a>
-                    <a href="mailto:mushovaalawi@gmail.com" style="color: #D44638 ; text-decoration: none;">Gmail</a>
-                </p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-top: 10px; border-bottom: 3px solid;">
+            <div style="text-align: center; margin: 10px 0; max-width: 350px;">
+                <img src="https://media1.tenor.com/m/RuYctFpAb_UAAAAd/harry-potter-hermione-granger.gif" alt="Deskripsi GIF" style="width: 100%; max-width: 400px; border-radius: 8px;">
             </div>
 
-            <div style="flex: 1; min-width: 300px;">
-            <h2 class="font-ultra" style="border-bottom: 3px solid; margin: -5px 0 5px 0;">Casual Writings</h2>
+            <div style="flex: 1; max-width: 350px;">
+            <h2 class="font-ultra" style="text-align: center; font-size: 28px; border-bottom: 3px solid; margin: -5px 0 5px 0;">CASUAL WRITINGS</h2>
                     <div style="margin-bottom: 10px;">
-                    <p style="margin: 0; font-weight: 700; font-size: 19px;">Tahun 2022, Skripsi masih di Flashdisk?</p>
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">TAHUN 2022, SKRIPSI MASIH DI FLASHDISK?</p>
                     FILE SKRIPSIKU HILANG!!! INI GIMANA? Yak, ucapan di atas adalah suatu contoh keadaan
                     di mana seorang mahasiswa/i yang mungkin hampir mau bunuh diri disebabkan karena
                     suatu hal...
                     <a href="https://fawaed.medium.com/tahun-2022-skripsi-masih-di-flashdisk-2e591c9522a5" 
-                    class="font-rochester" style="color: #ff7300; text-decoration: none;
-                           font-size: 19px; transition: 1s;"
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 15px; transition: 1s;"
                     onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
                     baca di sini
                     </a>
 
-                    <p style="margin: 0; font-weight: 700; font-size: 19px;">Tata Krama Dasar dan Lanjutan</p>
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">TATA KRAMA DASAR DAN LANJUTAN</p>
                     Sebagai makhluk sosial, Manusia secara tidak langsung wajib membangun interaksi sosial.
                     Dalam membangun interaksi ini perlu adanya Tata Krama, Sopan Santun, Manners atau Etiket.
                     Perilaku... 
                     <a href="https://fawaed.medium.com/tata-krama-dasar-dan-lanjutan-82da4686df70" 
-                    class="font-rochester" style="color: #ff7300; text-decoration: none;
-                           font-size: 19px; transition: 1s;"
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 15px; transition: 1s;"
                     onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
                     baca di sini
                     </a>
-                </div>
+                    </div>
             </div>
         </div>
 
-            <p class="font-ultra" style="font-size: 30px; margin-top: -10px; margin-bottom: 0px;">
-                SUSAH BANGET NYARI KERJA ANJING
-            </p>
+    <div style="display: flex; gap: 20px; align-items: flex-start; margin: 15px">
+        <div style="display: flex; flex-direction: column; gap: 20px; flex: 1; max-width: 500px;">
+            <div style="width: 100%;">
+            <h2 class="font-ultra" style="text-align: center; font-size: 28px; margin: -15px 0 0px 0;">UI/UX CONCEPTS</h2>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+                    
+                    <div style="flex: 1 1 45%; max-width: 250px;">
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">SHORTCUT HANDLER</p>
+                    FILE SKRIPSIKU HILANG!!! INI GIMANA? Yak, ucapan di atas adalah suatu contoh keadaan
+                    di mana seorang mahasiswa/i yang mungkin hampir mau bunuh diri disebabkan karena
+                    suatu hal...
+                    <a href="https://fawaed.medium.com/tahun-2022-skripsi-masih-di-flashdisk-2e591c9522a5" 
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 19px; transition: 1s;"
+                    onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
+                    baca di sini
+                    </a></div>
 
-            <h2 style="border-bottom: 2px solid; margin: 0px 0 5px 0;">Work Experiences</h2>
-            <div style="margin-bottom: 10px;">
-                <p style="margin: 0; font-weight: 700; font-size: 19px;">Part-time • Cook Helper • Hakata Ikkousha Mega Mall Batam <span style="font-weight: 400; font-size: 14px;">(2025 Dec)</span></p>
-                Cracking boiled egg and split into two pieces...<br>
-                <p style="margin: 0; font-weight: 700; font-size: 19px;">Contract • Sales Counter • Gramedia Sudirman Yogyakarta <span style="font-weight: 400; font-size: 14px;">(2024 Aug — 2025 Feb)</span></p>
-                Serve and explain items that customers looking for...
+                    <div style="flex: 1 1 45%; max-width: 250px;">
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">UNTABBED FILE EXPLORER</p>
+                    FILE SKRIPSIKU HILANG!!! INI GIMANA? Yak, ucapan di atas adalah suatu contoh keadaan
+                    di mana seorang mahasiswa/i yang mungkin hampir mau bunuh diri disebabkan karena
+                    suatu hal...
+                    <a href="https://fawaed.medium.com/tahun-2022-skripsi-masih-di-flashdisk-2e591c9522a5" 
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 19px; transition: 1s;"
+                    onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
+                    baca di sini
+                    </a></div>
+
+                    </div>
             </div>
+
+            <div style="width: 100%;">
+            <h2 class="font-ultra" style="text-align: center; font-size: 28px; border-top: 3px solid; margin: -15px 0 0px 0;">CODING PROJECTS</h2>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+                    
+                    <div style="flex: 1 1 45%; max-width: 250px;">
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">SHORTCUT HANDLER</p>
+                    FILE SKRIPSIKU HILANG!!! INI GIMANA? Yak, ucapan di atas adalah suatu contoh keadaan
+                    di mana seorang mahasiswa/i yang mungkin hampir mau bunuh diri disebabkan karena
+                    suatu hal...
+                    <a href="https://fawaed.medium.com/tahun-2022-skripsi-masih-di-flashdisk-2e591c9522a5" 
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 19px; transition: 1s;"
+                    onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
+                    baca di sini
+                    </a></div>
+
+                    <div style="flex: 1 1 45%; max-width: 250px;">
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">UNTABBED FILE EXPLORER</p>
+                    FILE SKRIPSIKU HILANG!!! INI GIMANA? Yak, ucapan di atas adalah suatu contoh keadaan
+                    di mana seorang mahasiswa/i yang mungkin hampir mau bunuh diri disebabkan karena
+                    suatu hal...
+                    <a href="https://fawaed.medium.com/tahun-2022-skripsi-masih-di-flashdisk-2e591c9522a5" 
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 19px; transition: 1s;"
+                    onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
+                    baca di sini
+                    </a></div>
+
+                    </div>
+            </div>
+        </div>
+
+        <div>
+            <div style="flex: 1; max-width: 250px;">
+            <h2 class="font-ultra" style="text-align: center; font-size: 28px; margin: -15px 0 0px 0;">REG HACK</h2>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+
+                    <div style="flex: 1; min-width: 200px;">
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">REMOVE HOME AND ONEDRIVE FROM NAVIGATION PANE</p>
+                    FILE SKRIPSIKU HILANG!!! INI GIMANA? Yak, ucapan di atas adalah suatu contoh keadaan
+                    di mana seorang mahasiswa/i yang mungkin hampir mau bunuh diri disebabkan karena
+                    suatu hal...
+                    <a href="https://fawaed.medium.com/tahun-2022-skripsi-masih-di-flashdisk-2e591c9522a5" 
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 19px; transition: 1s;"
+                    onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
+                    baca di sini
+                    </a></div>
+
+                    <div style="flex: 1; min-width: 200px;">
+                    <p style="margin: 0; font-weight: 700; font-size: 19px;">UNINSTALL ROOT OF MICROSOFT EDGE</p>
+                    FILE SKRIPSIKU HILANG!!! INI GIMANA? Yak, ucapan di atas adalah suatu contoh keadaan
+                    di mana seorang mahasiswa/i yang mungkin hampir mau bunuh diri disebabkan karena
+                    suatu hal...
+                    <a href="https://fawaed.medium.com/tahun-2022-skripsi-masih-di-flashdisk-2e591c9522a5" 
+                    class="font-unifraktur" style="color: #ff7300; text-decoration: none;
+                           font-size: 19px; transition: 1s;"
+                    onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#ff7300'">
+                    baca di sini
+                    </a></div>
+
+                    </div>
+            </div>
+        </div>
     </div>
-    
+
+    <div>
     <a href="#projects" class="btn" onclick="pindahHalaman('projects', '< Projects'); return false;">Go to Projects</a>
     <a href="#socials" class="btn" onclick="pindahHalaman('socials', '< Socials'); return false;">Go to Socials</a>
     <a href="#contact" class="btn" onclick="pindahHalaman('contact', '< Contact'); return false;">Go to Contact</a>
     </div>
 
+    </div>
+    </div>
         <div id="projects" class="page-content">
             <a href="https://github.com" target="_blank" class="btn">Project 1</a>
             <a href="https://github.com" target="_blank" class="btn">Project 2</a>
@@ -183,7 +281,11 @@
 
         <div id="cvgw" class="page-content">
             <div style="text-align: justify; margin: 0; padding: 0; color: #333; line-height: 1.5;">
-            <br>
+            
+                <h1 style="border-bottom: 0px solid; margin: -5px 0 -20px -2px;">
+                    <a href="#" style="color: #333; text-decoration: none" title="KLIK UNTUK MELIHAT PORTOFOLIO">
+                    Fawaid Muhammad</a></h1>
+                
                 <p style="margin-bottom: -10px; color: #333;">
                 Batam, Indonesia | 
                 <a href="mailto:mushovaalawi@gmail.com" style="color: #333; text-decoration: none;">mushovaalawi@gmail.com</a> | 
@@ -375,14 +477,14 @@
     </div>
 
     <script>
-        const titles = { 'home': `<span class="c1">faid-</span>
-                                  <span class="c2">le.git</span>
-                                  <span class="c3">hu</span>
-                                  <span class="c4">b.io/graphy/</span>`,
+        const titles = { 'home': `<span class="c1">FAID-</span>
+                                  <span class="c2">LE.GIT</span>
+                                  <span class="c3">HU</span>
+                                  <span class="c4">B.IO/GRAPHY/</span>`,
                          'projects': '❮ Projects',
                          'socials': '❮ Socials',
                          'contact': '❮ Contact',
-                         'cvgw': 'Fawaid Muhammad'
+                         'cvgw': ' '
                         };
 
         function pindahHalaman(idTujuan, judulBaru) {
@@ -394,16 +496,17 @@
             var target = document.getElementById(idTujuan);
             if(target) {
                 target.style.display = 'block';
+                target.classList.add('fade-in'); // <--- TAMBAHKAN INI AJA
                 document.getElementById('main-title').querySelector('h1').innerHTML = judulBaru;
                 history.replaceState(null, null, "#" + idTujuan);
             }
         }
 
         function balikKeHome() {
-            pindahHalaman('home', `<span class="c1">faid-</span>
-                           <span class="c2">le.git</span>
-                           <span class="c3">hu</span>
-                           <span class="c4">b.io/graphy/</span>`);
+            pindahHalaman('home', `<span class="c1">FAID-</span>
+                           <span class="c2">LE.GIT</span>
+                           <span class="c3">HU</span>
+                           <span class="c4">B.IO/GRAPHY/</span>`);
             history.replaceState(null, null, ' ');
         }
 
@@ -425,6 +528,7 @@
                 pindahHalaman(initialHash, titles[initialHash]);
             }
         });
+        
     </script>
 
 </body>
